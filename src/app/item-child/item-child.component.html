@@ -1,0 +1,55 @@
+
+<div style="margin-top : 10px; margin-bottom : 10px;">
+
+    <form #amazonForm = "ngForm">
+            <table style="width:100%;" class="form-group" >
+               
+                        <div style="width:15%;float: left">
+                                <tr>
+                                        <td > 
+                                            <img [src]="amazonD.p_image" width="200" height="200"    >
+                                        </td>
+
+                                </tr> 
+                        </div>
+
+                        <div style="width:85%;float: right">
+                            <tr>
+                                <button (click)="selectProduct()">Add to Cart</button><br>
+                            </tr>
+                                <tr>
+                                        <td class="cold-md-3 text-danger"> 
+                                                Product Name : {{amazonD.p_name }} 
+                                        </td>
+                                        </tr>
+
+                                       <tr> <td class="cold-md-2 text-success"> 
+                                                Product Cost : {{ amazonD.p_cost}}
+                                        </td></tr>
+
+                                       <tr> <td class="cold-md-3 text-danger"> 
+                                                Product Availability : {{amazonD.p_availability }}
+                                        </td></tr>
+
+                                        <tr><td class="cold-md-2 text-success"> 
+                                                Product Details: {{amazonD.p_details }}
+
+                                        </td></tr>
+                                       <tr><td class="cold-md-2 text-success"> 
+                                            Product Category: {{amazonD.p_category }}
+
+                                    </td></tr>
+                                    
+
+
+                                        <td class="cold-md-2"> 
+                                             Quantity:   <input type="text" name="userDiscount" [(ngModel)]= "amazonD.p_qty"> 
+                                       
+                                                
+                                        </td><br>
+                                
+                        </div>
+            </table> 
+    </form>
+
+</div>

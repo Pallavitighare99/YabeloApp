@@ -1,0 +1,11 @@
+
+<div>
+    <br>
+    <tr>
+        <td style="padding-left: 200px;">
+            <input type="text" [(ngModel)]="query" placeholder="search by category">
+        </td>
+    </tr>
+    <br>
+</div>
+<app-item-child *ngFor="let i of pallData | searchProduct : query "  [amazonD]="i"></app-item-child>
